@@ -1,4 +1,4 @@
-export const GameHeader = ({ score, moves }) => {
+export const GameHeader = ({ score, moves, onReset }) => {
   return (
     <div className="game-header">
       <h1>Memory Card Game</h1>
@@ -11,6 +11,10 @@ export const GameHeader = ({ score, moves }) => {
           <span className="stat-label">Moves:</span> <span className="stat-value">{moves}</span>
         </div>
       </div>
+
+      <button className="reset-btn" onClick={onReset}>
+        New Game
+      </button>
     </div>
   );
 };
